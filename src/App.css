@@ -1,0 +1,30 @@
+.dimension {
+    min-width: 600px;
+    height: 75%;
+}
+
+.border-height{
+    height: 95vh;
+}
+
+.scroll {
+    overflow-x: auto;
+}
+
+.outer {
+    min-width: 100%;
+}
+
+.margin {
+    min-width: 500px;
+    background: white;
+}
+
+.particles {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}

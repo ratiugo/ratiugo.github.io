@@ -1,3 +1,52 @@
-.border-height {
-    height: 95vh;
+.scroll {
+    overflow: scroll;
+}
+
+.content {
+    max-width: 75%;
+    max-height: 100vh;
+    min-height: 400px;
+    min-width: 300px;
+}
+
+.text {
+  position: absolute;
+  color: white;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.15s ease-in;
+}
+
+.imgWrapper{
+}
+
+.content:hover ~ .hidden {
+    visibility: visible;
+    opacity: 1;
+    pointer-events:none;
+}
+
+.infoText {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .infoText{
+        max-width: 75%;
+    }
+}
+
+.noLink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.margin {
+    margin-right: auto;
+    margin-left: auto;
 }

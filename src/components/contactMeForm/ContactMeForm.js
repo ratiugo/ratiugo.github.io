@@ -4,8 +4,8 @@ import './ContactMeForm.css';
 const ContactMeForm = () => {
     return(
 
-    <form className="p black-80 contactForm ma2">
-      <div className="ba br3 b--dark-gray shadow-5">
+    <form className="black-80 contactForm ">
+      <div className="bg-black-10 br3 shadow-5">
 
         <p className="pt3 pb3 f4-ns black-80 ml4">Get in touch.</p>
 

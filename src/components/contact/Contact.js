@@ -1,24 +1,43 @@
 import React from 'react';
 import ContactMeForm from '../contactMeForm/ContactMeForm';
+import MediaQuery from 'react-responsive';
+
 import './Contact.css';
 
 const Contact = ({id}) => {
     return(
             <div className = 'vh-100 mt5' id = {id}>
-                <h1 className = 'tc pt5 fw5 underline center'>Contact Me</h1>
+                <h1 className = 'tc pt5 fw5 center'>Contact Me</h1>
+                    <div className = 'bb w-50 center'>
+                    </div>
                     <div className = ''>
-                        <div className = 'pt3 flex flex-wrap justify-around'>
-                            <ContactMeForm className = 'contactForm' />
-                            <div className = 'ma2 br3 shadow-5 infoBox'>
-                                <p className="pt3 pb3 f4-ns black ml4 b">Colton Williams</p>
-                                <p className="pt3 pb3 f4-ns black ml4 i">coltontfw@gmail.com</p>
-                                <p className="pt3 pb3 f4-ns black ml4 i">778-240-9616</p>
-                                <a href = 'https://www.linkedin.com/in/colton-williams-a1b020134/'
-                                   target = 'blank'
-                                   className = 'pt3 pb3 f4-ns pa2 background-color black ml4 i shadow-2 br-pill link dim'>
-                                   linkedin
-                                </a>
-                            </div>
+                        <div className = ' flex flex-wrap justify-around'>
+                            <ContactMeForm />
+
+                            <MediaQuery query="(min-width: 768px)">
+                                <div className = 'w-75 flex flex-wrap items-center justify-center'>
+                                    <p className="pt3 pb3 f4-ns black ml4 i">Colton Williams</p>
+                                    <p className="pt3 pb3 f4-ns black ml4 i">coltontfw@gmail.com</p>
+                                    <a href = 'https://www.linkedin.com/in/colton-williams-a1b020134/'
+                                       target = 'blank'
+                                       className = 'pt3 pb3 f4-ns pa2 background-color black ml4 i shadow-2 br-pill link dim'>
+                                       linkedin
+                                    </a>
+                                </div>
+                            </MediaQuery>
+
+                            <MediaQuery query="(max-width: 768px)">
+                                <div className = 'w-75 flex flex-wrap items-center justify-start'>
+                                    <p className="pt3 pb3 f4-ns black ml4 i">Colton Williams</p>
+                                    <p className="pt3 pb3 f4-ns black ml4 i">coltontfw@gmail.com</p>
+                                    <a href = 'https://www.linkedin.com/in/colton-williams-a1b020134/'
+                                       target = 'blank'
+                                       className = 'pt3 pb3 f4-ns pa2 background-color black ml4 i shadow-2 br-pill link dim'>
+                                       linkedin
+                                    </a>
+                                </div>
+                            </MediaQuery>
+
                         </div>
                     </div>
                 <br/>

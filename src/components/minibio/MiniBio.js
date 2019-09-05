@@ -4,7 +4,7 @@ import './MiniBio.css'
 const MiniBio = () => {
     return(
               <div >
-                <p className="height tc w-75 center minibio i">
+                <div className="height tc w-75 center minibio i">
 
                     Aspiring Web Developer
 
@@ -13,7 +13,7 @@ const MiniBio = () => {
                     Pedal Assembler at <div className = 'w-100 pa3'><a
                             href = 'http://kingsleyamplifiers.com/'
                             target = 'blank'
-                            className = 'pointer dim shadow-1 background-color br-pill pa2 link-style'>Kingsley Amplifiers
+                            className = 'pointer dim shadow-1 br-pill pa2 link-style'>Kingsley Amplifiers
                                        </a></div>
 
                     <br/><div className = 'bb w-25 center pt2'></div><br/>
@@ -22,9 +22,7 @@ const MiniBio = () => {
 
                     <br/><div className = 'bb w-25 center padding'></div><br/>
 
-                    Rock Climber, Guitar Player, Outdoor Enthusiast
-
-                </p>
+                </div>
               </div>
 
  );

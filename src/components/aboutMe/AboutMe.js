@@ -1,5 +1,5 @@
 import React from 'react';
-import picture from '../../images/climb3.jpeg'
+import picture from '../../images/climb3.jpeg';
 import Resume from '../../Resume.pdf';
 
 import './AboutMe.css';

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './App.css'
+import './App.css';
 
 import Particles from 'react-particles-js';
 import MediaQuery from 'react-responsive';
@@ -107,28 +107,28 @@ class App extends Component {
     // initialize state to change project view within the portfolio
     this.state = {
         'portfolio': 'homeview'
-    }
+    };
   }
 
   // change portfolio state when a project card is clicked
-  cardClicked = () => {
+  cardClicked(){
     this.setState({
       'portfolio': 'card'
-    })
+    });
     console.log(this.state.portfolio);
   }
 
   // change portfolio state back to home when back button is clicked
-  backtohomeview = () => {
+  backtohomeview(){
     this.setState({
       'portfolio': 'homeview'
-    })
+    });
   }
 
   render(){
 
     // assign portfolio state to an easier to use variable
-    const {portfolio} = this.state
+    const {portfolio} = this.state;
 
     return (
             <div>

@@ -1,9 +1,9 @@
 import React from 'react';
-import './MiniBio.css'
+import './MiniBio.css';
 
 const MiniBio = () => {
     return(
-              <div >
+            <div >
                 <div className="height tc w-75 center minibio i">
 
                     Aspiring Web Developer
@@ -23,7 +23,7 @@ const MiniBio = () => {
                     <br/><div className = 'bb w-25 center padding'></div><br/>
 
                 </div>
-              </div>
+            </div>
 
  );
 }

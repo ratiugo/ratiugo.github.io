@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-
 import './Navbar.css';
-
 import {animateScroll as scroll, Link} from 'react-scroll';
 import { Transition } from 'react-transition-group';
 
@@ -33,7 +31,7 @@ class Navbar extends Component {
         });
     }
 
-    scrollToTop = () => {
+    scrollToTop() {
     scroll.scrollToTop();
     }
 
@@ -46,7 +44,7 @@ class Navbar extends Component {
         const defaultStyle = {
           transition: `opacity ${duration}ms ease-in-out`,
           opacity: 0,
-        }
+        };
 
         const transitionStyles = {
           entering: { opacity: 1 },

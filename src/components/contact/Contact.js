@@ -41,9 +41,9 @@ const Contact = ({id}) => {
                         </div>
                     </div>
                 <br/>
-             <footer className = 'pt2 center w-75'>Made By Colton Williams</footer>
-                <div className = 'bb mt2 mb4 w-75 center'>
-                </div>
+                <footer className = 'pt2 center w-75'>Made By Colton Williams</footer>
+                    <div className = 'bb mt2 mb4 w-75 center'>
+                    </div>
             </div>
  );
 }

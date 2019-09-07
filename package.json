@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://ratiugo.github.io/ratiugo.github.io",
   "dependencies": {
+    "@babel/runtime": "^7.6.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-particles-js": "^2.7.0",
@@ -22,28 +23,11 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
       "not dead",
       "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^9.2.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-standard": "^4.0.1"
   }
 }

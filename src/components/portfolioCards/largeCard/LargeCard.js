@@ -1,11 +1,11 @@
 import React from 'react';
 import './LargeCard.css';
 
-const LargeCard = ({card}) => {
+const LargeCard = ({card, title}) => {
     return (
-        <div className="ma4 bg-white br3 dimension ba b--black-10 pointer dim flex justify-center items-center"
+        <div className="ma4 bg-black-30 br3 dimension pointer dim flex justify-center items-center"
              onClick = {card} >
-            <p>Example Project</p>
+            <p>{title}</p>
         </div>
  );
 }

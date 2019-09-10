@@ -1,17 +1,17 @@
-import React, {Component} from 'react';
-import './App.css';
+import React, {Component} from "react";
+import "./App.css";
 
-import Particles from 'react-particles-js';
-import MediaQuery from 'react-responsive';
+import Particles from "react-particles-js";
+import MediaQuery from "react-responsive";
 
-import Navbar from './components/navbar/Navbar';
-import Title from './components/title/Title';
-import MiniBio from './components/minibio/MiniBio';
-import AboutMe from './components/aboutMe/AboutMe';
-import LargeCard from './components/portfolioCards/largeCard/LargeCard';
-import SmallCard from './components/portfolioCards/smallCard/SmallCard';
-import Contact from './components/contact/Contact';
-import ExampleProject from './components/exampleProject/ExampleProject';
+import Navbar from "./components/navbar/Navbar";
+import Title from "./components/title/Title";
+import MiniBio from "./components/minibio/MiniBio";
+import AboutMe from "./components/aboutMe/AboutMe";
+import LargeCard from "./components/portfolioCards/largeCard/LargeCard";
+import SmallCard from "./components/portfolioCards/smallCard/SmallCard";
+import Contact from "./components/contact/Contact";
+import ExampleProject from "./components/exampleProject/ExampleProject";
 
 // Settings for animated background particles
 const particlesOptions = {
@@ -106,22 +106,22 @@ class App extends Component {
 
     // initialize state to change project view within the portfolio
     this.state = {
-        'portfolio': 'homeview'
+        "portfolio": "homeview"
     };
   }
 
   // change portfolio state when a project card is clicked
-  cardClicked(){
+  cardClicked = () => {
     this.setState({
-      'portfolio': 'card'
+      "portfolio": "card"
     });
     console.log(this.state.portfolio);
   }
 
   // change portfolio state back to home when back button is clicked
-  backtohomeview(){
+  backtohomeview = () => {
     this.setState({
-      'portfolio': 'homeview'
+      "portfolio": "homeview"
     });
   }
 
@@ -132,50 +132,55 @@ class App extends Component {
 
     return (
             <div>
-              <Particles className = 'particles'
+              <Particles className = "particles"
                 params = {particlesOptions}
               />
               <Navbar />
               <Title />
               <MiniBio />
-              <AboutMe id = 'aboutme' />
-              <div className = 'vh-100 w-100 center mt5' id= 'portfolio'>
-                <div className = 'w-75 center'>
-                  <div className = 'pa3'>
-                    <h1 className = 'tc pt3 fw5'>Portfolio</h1>
-                    <div className = 'bb w-75 center'>
+              <AboutMe id = "aboutme" />
+              <div className = "vh-100 w-100 center mt5" id= "portfolio">
+                <div className = "w-75 center">
+                  <div className = "pa3">
+                    <h1 className = "tc pt3 fw5">Portfolio</h1>
+                    <div className = "bb w-75 center">
                     </div>
+                    <p className = "tc">Coming Soon!</p>
                   </div>
-                    {portfolio === 'homeview'
+                    {portfolio === "homeview"
                       ?
 
                       <div>
                         <MediaQuery query="(min-width: 768px)">
-                          <div className = 'scroll br3 shadow-5 b--dark-gray'>
-                            <div className = 'vh-75 outer fl flex items-center'>
-                              <LargeCard card = {this.cardClicked}
-                                             className = '' />
-                              <LargeCard card = {this.cardClicked}
-                                             className = '' />
-                              <LargeCard card = {this.cardClicked}
-                                             className = ''/>
+                          <div className = "scroll">
+                            <div className = "vh-75 outer fl flex items-center">
+                              <LargeCard  card = {this.cardClicked}
+                                          className = " "
+                                          title = ""/>
+                              <LargeCard  card = {this.cardClicked}
+                                          className = " "
+                                          title = ""/>
+                              <LargeCard  card = {this.cardClicked}
+                                          className = " "
+                                          title = ""/>
                             </div>
                           </div>
                         </MediaQuery>
 
                         <MediaQuery query="(max-width: 768px)">
-                        <div className = 'vh-75 flex items-center'>
-                          <div className = 'scroll br3 shadow-5 b--dark-gray'>
-                            <div className = 'vh-50 outer fl flex items-center'>
-                                <SmallCard card = {this.cardClicked}
-                                               className = '' />
-                                <SmallCard card = {this.cardClicked}
-                                               className = '' />
-                                <SmallCard card = {this.cardClicked}
-                                               className = ''/>
+                          <div className = "vh-75 flex items-center">
+                            <div className = "scroll">
+                              <div className = "vh-50 outer fl flex items-center">
+                                  <SmallCard  card = {this.cardClicked}
+                                              className = " "
+                                              title = ""/>
+                                  <SmallCard  card = {this.cardClicked}
+                                              className = " "/>
+                                  <SmallCard  card = {this.cardClicked}
+                                              className = " "/>
+                              </div>
                             </div>
                           </div>
-                        </div>
                         </MediaQuery>
                       </div>
 
@@ -184,7 +189,7 @@ class App extends Component {
                     }
                 </div>
               </div>
-              <Contact id = 'contact' />
+              <Contact id = "contact" />
             </div>
   );
  }

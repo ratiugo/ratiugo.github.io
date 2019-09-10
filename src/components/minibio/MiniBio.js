@@ -10,7 +10,7 @@ const MiniBio = () => {
 
                     <br/><div className = 'bb w-25 center padding'></div><br/>
 
-                    Pedal Assembler at <div className = 'w-100 pa3'><a
+                    Pedal Builder at <div className = 'w-100 pa3'><a
                             href = 'http://kingsleyamplifiers.com/'
                             target = 'blank'
                             className = 'pointer dim shadow-1 br-pill pa2 link-style'>Kingsley Amplifiers

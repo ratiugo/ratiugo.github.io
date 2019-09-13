@@ -5,7 +5,7 @@ import { Transition } from 'react-transition-group';
 
 class Navbar extends Component {
 
-
+    //initialize state to track scroll direction
     constructor(props){
         super(props);
         this.state = {
@@ -23,6 +23,14 @@ class Navbar extends Component {
         window.removeEventListener("scroll", this.handleScroll);
     }
 
+    /*set scroll position and 'show' properties
+
+    scrollPos is simply the top position of the Navbar component, initially grabbed from current state
+    - begins at 0 and decreases with downward scrolling
+
+    show: 'true' if current scrollPos is greater than previous (i.e. upward scrolling)
+          'false' if current scrollPos is less than previous (i.e. downward scrolling)
+    */
     handleScroll() {
         const { scrollPos } = this.state;
         this.setState({
@@ -31,21 +39,23 @@ class Navbar extends Component {
         });
     }
 
+    //react-scroll function
     scrollToTop() {
     scroll.scrollToTop();
     }
 
     render(){
 
-        console.log(this.state.show);
+        //react scroll configuration to set duration of scroll
+        const duration = 750;
 
-        const duration = 300;
-
+        //react transition group configuration to set transition effect
         const defaultStyle = {
             transition: `opacity ${duration}ms ease-in-out`,
             opacity: 0,
         };
 
+        //react transition group configuration to set transition state properties
         const transitionStyles = {
             entering: { opacity: 1 },
             entered:  { opacity: 1 },
@@ -55,6 +65,7 @@ class Navbar extends Component {
 
 
         return(
+
             <Transition in = {this.state.show} timeout = {duration}>
                 {state => (
                     <div style={{
@@ -70,34 +81,40 @@ class Navbar extends Component {
                             </li>
 
                             <li className="link dim mid-gray dib mr2 pointer pa1 shadow-2 br-pill nav-color">
+
+                                {/*react-scroll component*/}
                                 <Link   activeClass="active"
                                         to="aboutme"
                                         spy={true}
                                         smooth={true}
                                         offset={0}
-                                        duration= {750}>
+                                        duration= {duration}>
                                 about
                                 </Link>
                             </li>
 
                             <li className="link dim mid-gray dib mr2 pointer pa1 shadow-2 br-pill nav-color">
+
+                                {/*react-scroll component*/}
                                 <Link   activeClass="active"
                                         to="portfolio"
                                         spy={true}
                                         smooth={true}
                                         offset={0}
-                                        duration= {750}>
+                                        duration= {duration}>
                                 portfolio
                                 </Link>
                             </li>
 
                             <li className="link dim mid-gray dib mr1 pointer pa1 fr shadow-2 br-pill nav-color">
+
+                                {/*react-scroll component*/}
                                 <Link   activeClass="active"
                                         to="contact"
                                         spy={true}
                                         smooth={true}
                                         offset={0}
-                                        duration= {750}>
+                                        duration= {duration}>
                                 contact me
                                 </Link>
                             </li>

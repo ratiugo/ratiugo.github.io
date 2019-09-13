@@ -13,7 +13,7 @@ import SmallCard from "./components/portfolioCards/smallCard/SmallCard";
 import Contact from "./components/contact/Contact";
 import ExampleProject from "./components/exampleProject/ExampleProject";
 
-// Settings for animated background particles
+// settings for animated background particles
 const particlesOptions = {
 
   particles: {
@@ -98,7 +98,7 @@ const particlesOptions = {
   "retina_detect": true
 };
 
-// Main App component rendered in index.js
+// main app component rendered in index.js
 class App extends Component {
 
   constructor(){
@@ -115,7 +115,6 @@ class App extends Component {
     this.setState({
       "portfolio": "card"
     });
-    console.log(this.state.portfolio);
   }
 
   // change portfolio state back to home when back button is clicked
@@ -132,13 +131,20 @@ class App extends Component {
 
     return (
             <div>
+
               <Particles className = "particles"
                 params = {particlesOptions}
               />
+
               <Navbar />
+
               <Title />
+
               <MiniBio />
+
               <AboutMe id = "aboutme" />
+
+              {/*portfolio component - in this file for state changes*/}
               <div className = "vh-100 w-100 center mt5" id= "portfolio">
                 <div className = "w-75 center">
                   <div className = "pa3">
@@ -154,13 +160,13 @@ class App extends Component {
                         <MediaQuery query="(min-width: 768px)">
                           <div className = "scroll">
                             <div className = "vh-75 outer fl flex items-center">
-                              <LargeCard  card = {this.cardClicked}
+                              <LargeCard  onClick = {this.cardClicked}
                                           className = " "
                                           title = ""/>
-                              <LargeCard  card = {this.cardClicked}
+                              <LargeCard  onClick = {this.cardClicked}
                                           className = " "
                                           title = ""/>
-                              <LargeCard  card = {this.cardClicked}
+                              <LargeCard  onClick = {this.cardClicked}
                                           className = " "
                                           title = ""/>
                             </div>
@@ -171,12 +177,12 @@ class App extends Component {
                           <div className = "vh-75 flex items-center">
                             <div className = "scroll">
                               <div className = "vh-50 outer fl flex items-center">
-                                  <SmallCard  card = {this.cardClicked}
+                                  <SmallCard  onClick = {this.cardClicked}
                                               className = " "
                                               title = ""/>
-                                  <SmallCard  card = {this.cardClicked}
+                                  <SmallCard  onClick = {this.cardClicked}
                                               className = " "/>
-                                  <SmallCard  card = {this.cardClicked}
+                                  <SmallCard  onClick = {this.cardClicked}
                                               className = " "/>
                               </div>
                             </div>
@@ -185,7 +191,7 @@ class App extends Component {
                       </div>
 
                       :
-                        <ExampleProject backtohomeview = {this.backtohomeview} />
+                        <ExampleProject onClick = {this.backtohomeview} />
                     }
                 </div>
               </div>

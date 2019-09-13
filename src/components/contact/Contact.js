@@ -14,6 +14,7 @@ const Contact = ({id}) => {
                         <div className = ' flex flex-wrap justify-around'>
                             <ContactMeForm />
 
+                            {/*media query for different info layout for large devices*/}
                             <MediaQuery query="(min-width: 768px)">
                                 <div className = 'w-75 flex flex-wrap items-center justify-center'>
                                     <p className="pt3 pb3 f4-ns black ml4 i">Colton Williams</p>
@@ -26,6 +27,7 @@ const Contact = ({id}) => {
                                 </div>
                             </MediaQuery>
 
+                            {/*media query for different info layout for small devices*/}
                             <MediaQuery query="(max-width: 768px)">
                                 <div className = 'w-75 flex flex-wrap items-center justify-start'>
                                     <p className="pt3 pb3 f4-ns black ml4 i">Colton Williams</p>

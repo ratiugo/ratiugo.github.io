@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import './Navbar.css';
-import {animateScroll as scroll, Link} from 'react-scroll';
-import { Transition } from 'react-transition-group';
+import React, {Component} from "react";
+import "./Navbar.css";
+import {animateScroll as scroll, Link} from "react-scroll";
+import { Transition } from "react-transition-group";
 
 class Navbar extends Component {
 
@@ -23,13 +23,13 @@ class Navbar extends Component {
         window.removeEventListener("scroll", this.handleScroll);
     }
 
-    /*set scroll position and 'show' properties
+    /*set scroll position and "show" properties
 
     scrollPos is simply the top position of the Navbar component, initially grabbed from current state
     - begins at 0 and decreases with downward scrolling
 
-    show: 'true' if current scrollPos is greater than previous (i.e. upward scrolling)
-          'false' if current scrollPos is less than previous (i.e. downward scrolling)
+    show: "true" if current scrollPos is greater than previous (i.e. upward scrolling)
+          "false" if current scrollPos is less than previous (i.e. downward scrolling)
     */
     handleScroll() {
         const { scrollPos } = this.state;

@@ -1,6 +1,6 @@
-import React from 'react';
-import './Title.css';
-import Colton from '../../images/colton.jpeg';
+import React from "react";
+import "./Title.css";
+import Colton from "../../images/colton.jpeg";
 
 const Title = () => {
     return(

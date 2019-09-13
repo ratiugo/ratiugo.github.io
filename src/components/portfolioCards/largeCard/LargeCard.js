@@ -1,5 +1,5 @@
-import React from 'react';
-import './LargeCard.css';
+import React from "react";
+import "./LargeCard.css";
 
 const LargeCard = ({onClick, title}) => {
     return (

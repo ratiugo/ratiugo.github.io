@@ -47,7 +47,7 @@ const Contact = ({id}) => {
                     <div className = "bb mt2 mb4 w-75 center">
                     </div>
             </div>
- );
+    );
 }
 
 export default Contact;

@@ -25,7 +25,7 @@ const MiniBio = () => {
                 </div>
             </div>
 
- );
+    );
 }
 
 export default MiniBio;

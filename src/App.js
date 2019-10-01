@@ -197,8 +197,8 @@ class App extends Component {
               </div>
               <Contact id = "contact" />
             </div>
-  );
- }
+    );
+  }
 }
 
 export default App;

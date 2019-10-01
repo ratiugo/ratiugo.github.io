@@ -41,7 +41,7 @@ class Navbar extends Component {
 
     //react-scroll function
     scrollToTop() {
-    scroll.scrollToTop();
+        scroll.scrollToTop();
     }
 
     render(){
@@ -126,8 +126,8 @@ class Navbar extends Component {
             </Transition>
 
 
-  );
- }
+        );
+    }
 }
 
 export default Navbar

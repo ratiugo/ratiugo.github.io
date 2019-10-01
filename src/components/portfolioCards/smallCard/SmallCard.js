@@ -7,7 +7,7 @@ const SmallCard = ({onClick, title}) => {
              onClick = {onClick} >
             <p>{title}</p>
         </div>
- );
+    );
 }
 
 export default SmallCard;

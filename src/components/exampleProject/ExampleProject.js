@@ -11,7 +11,7 @@ const ExampleProject = ({onClick}) => {
                     </div>
                 </div>
             </div>
- );
+    );
 }
 
 export default ExampleProject;

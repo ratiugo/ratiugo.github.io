@@ -62,3 +62,7 @@ typings/
 .env
 
 .DS_Store
+
+.prettierrc
+
+.eslintrc

@@ -24,6 +24,11 @@ const Contact = ({id}) => {
                                        className = "pt3 pb3 f4-ns pa2 background-color black ml4 i shadow-2 br-pill link dim">
                                        linkedin
                                     </a>
+                                    <a href = "https://github.com/ratiugo"
+                                       target = "blank"
+                                       className = "pt3 pb3 f4-ns pa2 background-color black ml4 i shadow-2 br-pill link dim">
+                                       github
+                                    </a>
                                 </div>
                             </MediaQuery>
 
@@ -36,6 +41,11 @@ const Contact = ({id}) => {
                                        target = "blank"
                                        className = "pt3 pb3 f4-ns pa2 background-color black ml4 i shadow-2 br-pill link dim">
                                        linkedin
+                                    </a>
+                                    <a href = "https://github.com/ratiugo"
+                                       target = "blank"
+                                       className = "pt3 pb3 f4-ns pa2 background-color black ml4 i shadow-2 br-pill link dim">
+                                       github
                                     </a>
                                 </div>
                             </MediaQuery>

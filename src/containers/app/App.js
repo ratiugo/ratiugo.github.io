@@ -4,14 +4,17 @@ import "./App.css";
 import Particles from "react-particles-js";
 import MediaQuery from "react-responsive";
 
-import Navbar from "./components/navbar/Navbar";
-import Title from "./components/title/Title";
-import MiniBio from "./components/minibio/MiniBio";
-import AboutMe from "./components/aboutMe/AboutMe";
-import LargeCard from "./components/portfolioCards/largeCard/LargeCard";
-import SmallCard from "./components/portfolioCards/smallCard/SmallCard";
-import Contact from "./components/contact/Contact";
-import ExampleProject from "./components/exampleProject/ExampleProject";
+import Navbar from "../../containers/navbar/Navbar";
+import Blog from "../../containers/blog/Blog";
+import DropDownNavbar from "../../containers/dropDownNavbar/DropDownNavbar";
+
+import Title from "../../components/title/Title";
+import MiniBio from "../../components/minibio/MiniBio";
+import AboutMe from "../../components/aboutMe/AboutMe";
+import LargeCard from "../../components/portfolioCards/largeCard/LargeCard";
+import SmallCard from "../../components/portfolioCards/smallCard/SmallCard";
+import Contact from "../../components/contact/Contact";
+import ExampleProject from "../../components/exampleProject/ExampleProject";
 
 // settings for animated background particles
 const particlesOptions = {
@@ -136,13 +139,21 @@ class App extends Component {
                 params = {particlesOptions}
               />
 
-              <Navbar />
+              <MediaQuery query="(min-width: 768px)">
+                <Navbar />
+              </MediaQuery>
+
+              <MediaQuery query="(max-width: 768px)">
+                <DropDownNavbar />
+              </MediaQuery>
 
               <Title />
 
               <MiniBio />
 
               <AboutMe id = "aboutme" />
+
+              <Blog id = "blog" />
 
               {/*portfolio component - in this file for state changes*/}
               <div className = "vh-100 w-100 center mt5" id= "portfolio">
@@ -153,8 +164,7 @@ class App extends Component {
                     </div>
                     <p className = "tc">Coming Soon!</p>
                   </div>
-                    {portfolio === "homeview"
-                      ?
+                    {portfolio === "homeview" ?
 
                       <div>
                         <MediaQuery query="(min-width: 768px)">

@@ -1,5 +1,5 @@
 import React from "react";
-import ContactMeForm from "../contactMeForm/ContactMeForm";
+import ContactMeForm from "../../containers/contactMeForm/ContactMeForm";
 import MediaQuery from "react-responsive";
 
 import "./Contact.css";

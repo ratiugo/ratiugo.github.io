@@ -97,6 +97,19 @@ class Navbar extends Component {
 
                                 {/*react-scroll component*/}
                                 <Link   activeClass="active"
+                                        to="blog"
+                                        spy={true}
+                                        smooth={true}
+                                        offset={0}
+                                        duration= {duration}>
+                                blog
+                                </Link>
+                            </li>
+
+                            <li className="link dim mid-gray dib mr2 pointer pa1 shadow-2 br-pill nav-color">
+
+                                {/*react-scroll component*/}
+                                <Link   activeClass="active"
                                         to="portfolio"
                                         spy={true}
                                         smooth={true}

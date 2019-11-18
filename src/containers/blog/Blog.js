@@ -5,6 +5,7 @@ import MediaQuery from "react-responsive";
 import "./Blog.css";
 
 import Hello from "./blogPosts/Hello";
+import UpdateSiteAWS from "./blogPosts/UpdateSiteAWS";
 
 
 class Blog extends Component {
@@ -32,6 +33,12 @@ class Blog extends Component {
         });
     }
 
+    returnToBlogListSmart = (blogData) => {
+        this.setState({
+            blog: blogData
+        })
+    }
+
 
     render(){
 
@@ -40,8 +47,11 @@ class Blog extends Component {
 
         //route clicked blog to be rendered
         switch (this.state.blog) {
-            case "10/28/2019":
+            case "11/12/2019":
                 blogPost = <Hello onClick = {this.returnToBlogList}/>;
+                break;
+            case "11/18/2019":
+                blogPost = <UpdateSiteAWS blogCallback = {this.returnToBlogListSmart}/>;
                 break;
             default:
                 blogPost = null;
@@ -63,14 +73,24 @@ class Blog extends Component {
                                 <div>
                                     <MediaQuery query="(max-width: 768px)">
                                         <div className = "w-75 center">
-                                            <div className = "flex">
+                                            <div className = "flex scroll">
                                                 <ul>
+                                                {/*
                                                     <li
                                                         className = "pointer underline dim"
-                                                        onClick = {() => this.setBlogStateTo("10/28/2019")}
+                                                        onClick = {() => this.setBlogStateTo("11/18/2019")}
+                                                    >
+                                                        11/18/2019 - Updating website hosted with AWS
+                                                    </li><br/><br/>
+                                                */}
+
+                                                    <li
+                                                        className = "pointer underline dim"
+                                                        onClick = {() => this.setBlogStateTo("11/12/2019")}
                                                     >
                                                         11/12/2019 - Hello!
-                                                    </li>
+                                                    </li><br/><br/>
+
                                                 </ul>
                                             </div>
                                         </div>
@@ -78,14 +98,24 @@ class Blog extends Component {
 
                                     <MediaQuery query="(min-width: 768px)">
                                         <div className = "w-75 center">
-                                            <div className = "flex justify-start">
+                                            <div className = "flex justify-start scroll">
                                                 <ul>
+                                                {/*
                                                     <li
                                                         className = "pointer underline dim"
-                                                        onClick = {() => this.setBlogStateTo("10/28/2019")}
+                                                        onClick = {() => this.setBlogStateTo("11/18/2019")}
+                                                    >
+                                                        11/18/2019 - Updating website hosted with AWS
+                                                    </li><br/><br/>
+                                                */}
+
+                                                    <li
+                                                        className = "pointer underline dim"
+                                                        onClick = {() => this.setBlogStateTo("11/12/2019")}
                                                     >
                                                         11/12/2019 - Hello!
-                                                    </li>
+                                                    </li><br/><br/>
+
                                                 </ul>
                                             </div>
                                         </div>
@@ -93,8 +123,16 @@ class Blog extends Component {
                                 </div>
                         </div>
                     :
-                        <div>
-                            {blogPost}
+                        <div className = "w-100 center">
+                            <div className = "pa3">
+                                <h1 className = "tc pt3 fw5">Blog</h1>
+                                <div className = "bb w-50 center">
+                                </div>
+                            </div>
+
+                                <div>
+                                    {blogPost}
+                                </div>
                         </div>
                     }
 

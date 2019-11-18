@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import { Transition } from "react-transition-group";
 import {animateScroll as scroll, Link} from "react-scroll";
 
 import "./DropDownNavbar.css";
@@ -73,27 +72,7 @@ class DropDownNavbar extends Component {
     //react scroll configuration to set duration of scroll
     const duration = 750;
 
-    //react transition group configuration to set transition effect
-    const defaultStyle = {
-        transition: `opacity ${duration}ms ease-in-out`,
-        opacity: 0,
-    };
-
-    //react transition group configuration to set transition state properties
-    const transitionStyles = {
-        entering: { opacity: 1 },
-        entered:  { opacity: 1 },
-        exiting:  { opacity: 1 },
-        exited:  { opacity: 0 },
-    };
-
     return (
-    <Transition in = {this.state.show} timeout = {duration}>
-      {state => (
-          <div style={{
-              ...defaultStyle,
-              ...transitionStyles[state]
-          }}>
         <div className = "w-100 ph3 pv3 pv4-ns ph4-m ph5-l navbar">
 
             <button
@@ -172,9 +151,6 @@ class DropDownNavbar extends Component {
               )
           }
         </div>
-        </div>
-        )}
-    </Transition>
     );
   }
 }

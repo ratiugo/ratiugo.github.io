@@ -4,10 +4,6 @@ body {
   font-family: 'Courier New', Courier, monospace;
   background: linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.15)), url('./images/forest-mist.jpg') no-repeat center center fixed;
   background-size: cover;
-
+  min-width: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}

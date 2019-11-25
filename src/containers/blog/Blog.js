@@ -4,8 +4,8 @@ import MediaQuery from "react-responsive";
 
 import "./Blog.css";
 
-import Hello from "./blogPosts/Hello";
-import UpdateSiteAWS from "./blogPosts/UpdateSiteAWS";
+import Hello from "./blogPosts/11_12_2019/Hello";
+import UpdateSiteAWS from "./blogPosts/11_18_2019/UpdateSiteAWS";
 
 
 class Blog extends Component {
@@ -75,14 +75,12 @@ class Blog extends Component {
                                         <div className = "w-75 center">
                                             <div className = "flex scroll">
                                                 <ul>
-                                                {/*
                                                     <li
                                                         className = "pointer underline dim"
                                                         onClick = {() => this.setBlogStateTo("11/18/2019")}
                                                     >
                                                         11/18/2019 - Updating website hosted with AWS
                                                     </li><br/><br/>
-                                                */}
 
                                                     <li
                                                         className = "pointer underline dim"
@@ -100,14 +98,12 @@ class Blog extends Component {
                                         <div className = "w-75 center">
                                             <div className = "flex justify-start scroll">
                                                 <ul>
-                                                {/*
                                                     <li
                                                         className = "pointer underline dim"
                                                         onClick = {() => this.setBlogStateTo("11/18/2019")}
                                                     >
                                                         11/18/2019 - Updating website hosted with AWS
                                                     </li><br/><br/>
-                                                */}
 
                                                     <li
                                                         className = "pointer underline dim"
@@ -123,10 +119,10 @@ class Blog extends Component {
                                 </div>
                         </div>
                     :
-                        <div className = "w-100 center">
+                        <div className = "w-75 center">
                             <div className = "pa3">
                                 <h1 className = "tc pt3 fw5">Blog</h1>
-                                <div className = "bb w-50 center">
+                                <div className = "bb w-75 center">
                                 </div>
                             </div>
 

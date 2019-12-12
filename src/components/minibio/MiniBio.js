@@ -6,7 +6,7 @@ const MiniBio = () => {
             <div >
                 <div className="height tc w-75 center minibio i">
 
-                    Aspiring Web Developer
+                    React, Node.js Developer
 
                     <br/><div className = "bb w-25 center padding"></div><br/>
 

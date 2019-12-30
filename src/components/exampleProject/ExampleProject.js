@@ -1,6 +1,7 @@
 import React from "react";
 import "./ExampleProject.css";
 
+
 const ExampleProject = ({onClick}) => {
     return(
             <div className = "scroll">

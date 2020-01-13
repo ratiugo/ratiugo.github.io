@@ -3,10 +3,12 @@ import "./SpotifyCard.css";
 
 const SpotifyCard = ({onClick, title}) => {
     return (
-        <div className="ma3 bg-black-30 br3 dimension2 ba b--black-10 pointer dim flex justify-center items-center"
+        <div className="ma3 bg-black-30 br3 dimension2 ba b--black-10 pointer dim flex justify-center items-center spotify-app-image"
              onClick = {onClick} >
-            <div className = "w-75 h-75 flex justify-center items-start">
-                <p className = "">Spotify Recently Played Playlist</p>
+            <div className = "h-100 flex justify-center items-start">
+                <div className = "bg-black-70 br3 pa3">
+                    <p className = "i white f6">Spotify Recently Played Playlist web app</p>
+                </div>
             </div>
         </div>
     );

@@ -6,6 +6,7 @@ import "./Blog.css";
 
 import Hello from "./blogPosts/11_12_2019/Hello";
 import UpdateSiteAWS from "./blogPosts/11_18_2019/UpdateSiteAWS";
+import SpotifyApp from "./blogPosts/01_13_2020/SpotifyApp";
 
 
 class Blog extends Component {
@@ -53,6 +54,9 @@ class Blog extends Component {
             case "11/18/2019":
                 blogPost = <UpdateSiteAWS blogCallback = {this.returnToBlogListSmart}/>;
                 break;
+            case "01/13/2020":
+                blogPost = <SpotifyApp onClick = {this.returnToBlogList}/>;
+                break;
             default:
                 blogPost = null;
         }
@@ -77,6 +81,13 @@ class Blog extends Component {
                                                 <ul>
                                                     <li
                                                         className = "pointer underline dim"
+                                                        onClick = {() => this.setBlogStateTo("01/13/2020")}
+                                                    >
+                                                        01/13/2020 - Recently Played Spotify App
+                                                    </li><br/><br/>
+
+                                                    <li
+                                                        className = "pointer underline dim"
                                                         onClick = {() => this.setBlogStateTo("11/18/2019")}
                                                     >
                                                         11/18/2019 - Updating website hosted with AWS
@@ -98,6 +109,13 @@ class Blog extends Component {
                                         <div className = "w-75 center">
                                             <div className = "flex justify-start scroll">
                                                 <ul>
+                                                    <li
+                                                        className = "pointer underline dim"
+                                                        onClick = {() => this.setBlogStateTo("01/13/2020")}
+                                                    >
+                                                        01/13/2020 - Recently Played Spotify App
+                                                    </li><br/><br/>
+
                                                     <li
                                                         className = "pointer underline dim"
                                                         onClick = {() => this.setBlogStateTo("11/18/2019")}

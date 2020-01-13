@@ -1,3 +1,9 @@
 .spotifyGreenFaded {
   background-color: rgba(30, 215, 96, 0.5);
 }
+
+.spotify-app-image {
+    background-image: url("../../../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}

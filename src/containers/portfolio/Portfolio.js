@@ -5,6 +5,8 @@ import SmallCard from "../../components/portfolioCards/smallCard/SmallCard";
 import LargeCard from "../../components/portfolioCards/largeCard/LargeCard";
 import SpotifyCardLarge from "../../components/portfolioCards/spotifyCard/SpotifyCardLarge";
 import SpotifyCardSmall from "../../components/portfolioCards/spotifyCard/SpotifyCardSmall";
+import ItemStorageCardLarge from "../../components/portfolioCards/itemStorageCard/ItemStorageCardLarge";
+import ItemStorageCardSmall from "../../components/portfolioCards/itemStorageCard/ItemStorageCardSmall";
 
 class Portfolio extends Component{
     render(){
@@ -24,7 +26,9 @@ class Portfolio extends Component{
                             <SpotifyCardLarge
                               onClick = {function(){window.location.href = 'http://recently-played-app.s3-website-us-west-2.amazonaws.com/'}}
                             />
-                            <LargeCard />
+                            <ItemStorageCardLarge
+                              onClick = {function(){window.location.href = 'https://fierce-beyond-75078.herokuapp.com/index.php'}}
+                             />
                             <LargeCard />
                           </div>
                         </div>
@@ -37,7 +41,9 @@ class Portfolio extends Component{
                                 <SpotifyCardSmall
                                   onClick = {function(){window.location.href = 'http://recently-played-app.s3-website-us-west-2.amazonaws.com/'}}
                                 />
-                                <SmallCard />
+                                <ItemStorageCardSmall
+                                  onClick = {function(){window.location.href = 'https://fierce-beyond-75078.herokuapp.com/index.php'}}
+                                 />
                                 <SmallCard />
                             </div>
                           </div>

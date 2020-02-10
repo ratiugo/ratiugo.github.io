@@ -109,19 +109,6 @@ class DropDownNavbar extends Component {
                       className="mobileNavItemWidth ma2 link dim mid-gray dib mr2 pointer pa1 shadow-2 br-pill nav-color f6 fw6 ttu">
                         {/*react-scroll component*/}
                         <Link   activeClass="active"
-                                to="blog"
-                                spy={true}
-                                smooth={true}
-                                offset={0}
-                                duration= {duration}>
-                        blog
-                        </Link>
-                    </button><br/>
-
-                    <button
-                      className="mobileNavItemWidth ma2 link dim mid-gray dib mr2 pointer pa1 shadow-2 br-pill nav-color f6 fw6 ttu">
-                        {/*react-scroll component*/}
-                        <Link   activeClass="active"
                                 to="portfolio"
                                 spy={true}
                                 smooth={true}

@@ -45,12 +45,7 @@ const SpotifyApp = ({onClick}) => {
 
                           <br/><br/>
 
-                          All of the above are relatively simple API calls, and I've posted the code here:
-                            <a
-                              href = "https://github.com/ratiugo/recently-played-spotify-app"
-                              target = "blank">
-                              https://github.com/ratiugo/recently-played-spotify-app
-                            </a>
+                          All of the above are relatively simple API calls, and I've uploaded all the code for the app on my github.
 
                           <br/><br/>
 
@@ -108,12 +103,7 @@ const SpotifyApp = ({onClick}) => {
 
                         <br/><br/>
 
-                        All of the above are relatively simple API calls, and I've posted the code here:
-                            <a
-                              href = "https://github.com/ratiugo/recently-played-spotify-app"
-                              target = "blank">
-                              https://github.com/ratiugo/recently-played-spotify-app
-                            </a>
+                        All of the above are relatively simple API calls, and I've uploaded all the code for the app on my github.
 
                         <br/><br/>
 

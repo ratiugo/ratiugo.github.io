@@ -6,7 +6,7 @@ import MediaQuery from "react-responsive";
 class UpdateSiteAWS extends Component {
 
   goBack = () => {
-         this.props.blogCallback("main-view");
+         this.props.blogCallback("home");
   }
 
     render(){

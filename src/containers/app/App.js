@@ -128,8 +128,6 @@ class App extends Component {
 
               <AboutMe id = "aboutme" />
 
-              <Blog id = "blog" />
-
               <Portfolio id = "portfolio" />
 
               <Contact id = "contact" />

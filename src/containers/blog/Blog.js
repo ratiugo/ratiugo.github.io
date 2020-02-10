@@ -1,6 +1,12 @@
 import React, {Component} from "react";
 
 import MediaQuery from "react-responsive";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 import "./Blog.css";
 
@@ -16,90 +22,96 @@ class Blog extends Component {
 
         //initialize state for navigating blog
         this.state = {
-            blog: "main-view"
+            view: "home"
         }
+
+        this.setState = this.setState.bind(this);
+        this.returnToBlogList = this.returnToBlogList.bind(this);
     }
 
-    //set blog state to date of entry
-    setBlogStateTo = (receivedState) => {
-        this.setState({
-            blog: receivedState
-        });
-    }
-
-    //return to the entry list after clicking the back button inside an entry
     returnToBlogList = () => {
+        console.log("return to blog list");
         this.setState({
-            blog: "main-view"
+            view: "home"
         });
+            console.log(this.state)
     }
 
     returnToBlogListSmart = (blogData) => {
         this.setState({
-            blog: blogData
+            view: blogData
         })
     }
 
 
     render(){
 
-        const {blog} = this.state;
-        let blogPost = null;
+        let that = this;
 
-        //route clicked blog to be rendered
-        switch (this.state.blog) {
-            case "11/12/2019":
-                blogPost = <Hello onClick = {this.returnToBlogList}/>;
-                break;
-            case "11/18/2019":
-                blogPost = <UpdateSiteAWS blogCallback = {this.returnToBlogListSmart}/>;
-                break;
-            case "01/13/2020":
-                blogPost = <SpotifyApp onClick = {this.returnToBlogList}/>;
-                break;
-            default:
-                blogPost = null;
-        }
-
-
+        let {view} = this.state;
 
             return (
-                <div className = "vh-100 w-100 center mt5" id= "blog">
+                <Router>
+                    <div className = "w-75 center vh-100">
 
-                    {blog === "main-view" ?
-                        <div className = "w-75 center">
-                            <div className = "pa3">
-                                <h1 className = "tc pt3 fw5">Blog</h1>
-                                <div className = "bb w-75 center">
-                                </div>
+                        <div className = "pa3">
+                            <h1
+                                className = "tc pt3 fw5"
+                                id = "target">
+                                    Blog
+                            </h1>
+                            <div className = "bb w-75 center">
                             </div>
+                        </div>
 
+                        {view === "home" ?
+                            <div className = "vh-100 w-100 center mt5" id= "blog">
                                 <div>
                                     <MediaQuery query="(max-width: 768px)">
                                         <div className = "w-75 center">
                                             <div className = "flex scroll">
                                                 <ul>
-                                                    <li
-                                                        className = "pointer underline dim"
-                                                        onClick = {() => this.setBlogStateTo("01/13/2020")}
-                                                    >
+                                                    <li>
+                                                        <Link
+                                                            to = "/blog/01132020"
+                                                            className = "pointer underline dim"
+                                                            onClick = {
+                                                                function(){
+                                                                    that.setState({view: "spotifyApp"});
+                                                                }
+                                                            }
+                                                        >
                                                         01/13/2020 - Recently Played Spotify App
+                                                        </Link>
                                                     </li><br/><br/>
 
-                                                    <li
-                                                        className = "pointer underline dim"
-                                                        onClick = {() => this.setBlogStateTo("11/18/2019")}
-                                                    >
+                                                    <li>
+                                                        <Link
+                                                            to = "/blog/11182019"
+                                                            className = "pointer underline dim"
+                                                            onClick = {
+                                                                function(){
+                                                                    that.setState({view: "updateSiteAWS"});
+                                                                }
+                                                            }
+                                                        >
                                                         11/18/2019 - Updating website hosted with AWS
+                                                        </Link>
                                                     </li><br/><br/>
 
-                                                    <li
-                                                        className = "pointer underline dim"
-                                                        onClick = {() => this.setBlogStateTo("11/12/2019")}
-                                                    >
+                                                    <li>
+                                                        <Link
+                                                            to = "/blog/11122019"
+                                                            className = "pointer underline dim"
+                                                            onClick = {
+                                                                function(){
+                                                                    that.setState({view: "hello"});
+                                                                }
+                                                            }
+                                                        >
                                                         11/12/2019 - Hello!
+                                                        </Link>
                                                     </li><br/><br/>
-
                                                 </ul>
                                             </div>
                                         </div>
@@ -109,48 +121,77 @@ class Blog extends Component {
                                         <div className = "w-75 center">
                                             <div className = "flex justify-start scroll">
                                                 <ul>
-                                                    <li
-                                                        className = "pointer underline dim"
-                                                        onClick = {() => this.setBlogStateTo("01/13/2020")}
-                                                    >
+                                                    <li>
+                                                        <Link
+                                                            to = "/blog/01132020"
+                                                            className = "pointer underline dim"
+                                                            onClick = {
+                                                                function(){
+                                                                    that.setState({view: "spotifyApp"});
+                                                                }
+                                                            }
+                                                        >
                                                         01/13/2020 - Recently Played Spotify App
+                                                        </Link>
                                                     </li><br/><br/>
 
-                                                    <li
-                                                        className = "pointer underline dim"
-                                                        onClick = {() => this.setBlogStateTo("11/18/2019")}
-                                                    >
+                                                    <li>
+                                                        <Link
+                                                            to = "/blog/11182019"
+                                                            className = "pointer underline dim"
+                                                            onClick = {
+                                                                function(){
+                                                                    that.setState({view: "updateSiteAWS"});
+                                                                }
+                                                            }
+                                                        >
                                                         11/18/2019 - Updating website hosted with AWS
+                                                        </Link>
                                                     </li><br/><br/>
 
-                                                    <li
-                                                        className = "pointer underline dim"
-                                                        onClick = {() => this.setBlogStateTo("11/12/2019")}
-                                                    >
+                                                    <li>
+                                                        <Link
+                                                            to = "/blog/11122019"
+                                                            className = "pointer underline dim"
+                                                            onClick = {
+                                                                function(){
+                                                                    that.setState({view: "hello"});
+                                                                }
+                                                            }
+                                                        >
                                                         11/12/2019 - Hello!
+                                                        </Link>
                                                     </li><br/><br/>
-
                                                 </ul>
                                             </div>
                                         </div>
                                     </MediaQuery>
                                 </div>
-                        </div>
-                    :
-                        <div className = "w-75 center">
-                            <div className = "pa3">
-                                <h1 className = "tc pt3 fw5">Blog</h1>
-                                <div className = "bb w-75 center">
-                                </div>
                             </div>
+                        :
 
-                                <div>
-                                    {blogPost}
-                                </div>
-                        </div>
-                    }
+                            <Switch>
 
-                </div>
+                                <Route path = "/blog/01132020">
+                                    <SpotifyApp onClick = {that.returnToBlogList}/>
+                                </Route>
+
+                                <Route
+                                    path = "/blog/11182019"
+                                >
+                                    <UpdateSiteAWS blogCallback = {that.returnToBlogListSmart}/>
+                                </Route>
+
+                                <Route path = "/blog/11122019">
+                                    <Hello onClick = {that.returnToBlogList}/>
+                                </Route>
+
+                            </Switch>
+                        }
+
+                    </div>
+
+                </Router>
             );
     }
 }

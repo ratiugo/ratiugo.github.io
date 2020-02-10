@@ -1,21 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.e8000a85.chunk.css",
-    "main.js": "/static/js/main.ce88c1c2.chunk.js",
-    "main.js.map": "/static/js/main.ce88c1c2.chunk.js.map",
+    "main.css": "/static/css/main.2be0229d.chunk.css",
+    "main.js": "/static/js/main.e21bdab2.chunk.js",
+    "main.js.map": "/static/js/main.e21bdab2.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.f2ebc575.js",
     "runtime~main.js.map": "/static/js/runtime~main.f2ebc575.js.map",
     "static/css/2.eb45ad44.chunk.css": "/static/css/2.eb45ad44.chunk.css",
-    "static/js/2.8c21dfd9.chunk.js": "/static/js/2.8c21dfd9.chunk.js",
-    "static/js/2.8c21dfd9.chunk.js.map": "/static/js/2.8c21dfd9.chunk.js.map",
+    "static/js/2.fd4afa01.chunk.js": "/static/js/2.fd4afa01.chunk.js",
+    "static/js/2.fd4afa01.chunk.js.map": "/static/js/2.fd4afa01.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b80eb02a72ba7a72973063a1ec721650.js": "/precache-manifest.b80eb02a72ba7a72973063a1ec721650.js",
+    "precache-manifest.7905434412b1f1b772a50b606f60dff8.js": "/precache-manifest.7905434412b1f1b772a50b606f60dff8.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.eb45ad44.chunk.css.map": "/static/css/2.eb45ad44.chunk.css.map",
-    "static/css/main.e8000a85.chunk.css.map": "/static/css/main.e8000a85.chunk.css.map",
+    "static/css/main.2be0229d.chunk.css.map": "/static/css/main.2be0229d.chunk.css.map",
+    "static/media/SpotifyCard.css": "/static/media/background.df16c63a.jpg",
     "static/media/climb3.jpeg": "/static/media/climb3.768dcd1b.jpeg",
     "static/media/colton.jpeg": "/static/media/colton.d40489ad.jpeg",
     "static/media/coltonwilliams.resume.pdf": "/static/media/coltonwilliams.resume.d6891ae6.pdf",
-    "static/media/index.css": "/static/media/forest-mist.9fcc6259.jpg"
+    "static/media/index.css": "/static/media/forest-mist.9fcc6259.jpg",
+    "static/media/ItemStorageCard.css": "/static/media/itemStorage.3dab2bb5.png"
   }
 }

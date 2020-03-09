@@ -1,6 +1,6 @@
 import React from "react";
 import picture from "../../images/climb3.jpeg";
-import Resume from "../../coltonwilliams.resume.pdf";
+import Resume from "../../coltonwilliams.resume.feb2020.pdf";
 
 import "./AboutMe.css";
 

@@ -3,7 +3,7 @@ import "./SpotifyCard.css";
 
 const SpotifyCard = ({onClick, title}) => {
     return (
-        <div className="ma3 bg-black-30 br3 dimension2 ba b--black-10 pointer dim flex justify-center items-center spotify-app-image"
+        <div className="ma3 bg-black-30 br3 dimension2 ba b--black-10 pointer dim flex spotify-app-image"
              onClick = {onClick} >
             <div className = "h-100 flex justify-center items-start">
                 <div className = "bg-black-70 br3 pa3">
